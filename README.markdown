@@ -8,9 +8,9 @@ homebrew-apache2
 
 **Installation**
 
-    brew tap djl/homebrew-apache2
-    brew install djl/apache2/apache22 # OR
-    brew install djl/apache2/apache24
+    brew tap jozefizso/homebrew-apache2
+    brew install jozefizso/apache2/apache22 # OR
+    brew install jozefizso/apache2/apache24
 
 
 **Caveats**
