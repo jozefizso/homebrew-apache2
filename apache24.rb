@@ -5,7 +5,6 @@ class Apache24 < Formula
   homepage 'https://httpd.apache.org/'
   url 'http://www.apache.org/dyn/closer.cgi?path=httpd/httpd-2.4.4.tar.bz2'
   sha1 '0c5ab7f876aa10fbe8bfab2c34f8dd3dc76db16c'
-  version '2.4.4'
 
   skip_clean ['bin', 'sbin']
 
@@ -30,7 +29,7 @@ class Apache24 < Formula
     system "make install"
 
     # create logs directory
-    FileUtils.mkpath "#{prefix}/logs"
+    mkpath "#{prefix}/logs"
   end
 
   def plist_name; 'org.apache.'+name end
