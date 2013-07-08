@@ -42,4 +42,26 @@ class Apache24 < Formula
     # create logs directory
     FileUtils.mkpath "#{prefix}/logs"
   end
+
+  def plist_name; 'org.apache.'+name end
+  plist_options :manual => "apachectl start"
+
+  def plist; <<-EOS.undent
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+      <key>Label</key>
+      <string>#{plist_name}</string>
+      <key>ProgramArguments</key>
+      <array>
+          <string>#{bin}/apachectl</string>
+          <string>start</string>
+      </array>
+      <key>RunAtLoad</key>
+      <true/>
+    </dict>
+    </plist>
+    EOS
+  end
 end
