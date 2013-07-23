@@ -9,8 +9,8 @@ class Apache24 < Formula
   skip_clean ['bin', 'sbin']
 
   depends_on 'pcre'
-  depends_on 'jozefizso/dupes/apr'
-  depends_on 'jozefizso/dupes/apr-util'
+  depends_on 'homebrew/dupes/apr'
+  depends_on 'homebrew/dupes/apr-util'
 
   def install
     args = [
@@ -21,8 +21,8 @@ class Apache24 < Formula
       "--with-mpm=prefork",
       "--enable-mods-shared=all",
       "--with-pcre=#{Formula.factory('pcre').prefix}",
-      "--with-apr=#{Formula.factory('jozefizso/dupes/apr').prefix}",
-      "--with-apr-util=#{Formula.factory('jozefizso/dupes/apr-util').prefix}",
+      "--with-apr=#{Formula.factory('homebrew/dupes/apr').prefix}",
+      "--with-apr-util=#{Formula.factory('homebrew/dupes/apr-util').prefix}",
     ]
     system './configure', *args
     system "make"
