@@ -3,8 +3,8 @@ require 'formula'
 
 class Apache22 < Formula
   homepage 'https://httpd.apache.org/'
-  url 'http://www.apache.org/dyn/closer.cgi?path=httpd/httpd-2.2.24.tar.bz2'
-  sha1 'f73bce14832ec40c1aae68f4f8c367cab2266241'
+  url 'http://www.apache.org/dyn/closer.cgi?path=httpd/httpd-2.2.25.tar.bz2'
+  sha1 'e34222d1a8de38825397a1c70949bcc5836a1236'
 
   skip_clean ['bin', 'sbin']
 
